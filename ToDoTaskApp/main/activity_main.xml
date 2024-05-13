@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FE212126"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/Task"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/deleteAll"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#F05E7AF2"
+        android:text="@string/X"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center|bottom"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="170dp"
+        android:background="@drawable/baseline_add_circle_24"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+
+
+
+</FrameLayout>
+
+</LinearLayout>
